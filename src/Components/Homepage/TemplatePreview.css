@@ -1,0 +1,27 @@
+.template-container {
+  width: 700px;
+  height: 600px;
+  border-radius: 18px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.template-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slideFade 0.9s ease;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

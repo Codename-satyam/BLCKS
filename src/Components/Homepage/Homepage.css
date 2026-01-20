@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Tiny5', sans-serif;
+  overflow-x: hidden;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* VIDEO */
+.background-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.background-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARKEN OVERLAY */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  transition: background 0.2s ease;
+}
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+}
+
+/* FADE IN */
+.fade-in {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL DOWN */
+.scroll_down {
+  position: absolute;
+  bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.arrow {
+  font-size: 28px;
+  animation: bounce 1.6s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

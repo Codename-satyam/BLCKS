@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+.zero {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #011937, #87b2f6);
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+/* ========================= */
+/* CENTER CONTENT */
+/* ========================= */
+
+.zero-center {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.zero-center h1 {
+  font-size: 85px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #ffffff;
+  font-family: "Pixelify Sans", sans-serif;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cta-btn {
+  margin-top: 30px;
+  padding: 14px 36px;
+  font-size: 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: "Pixelify Sans", sans-serif;
+  background: #1e6dfc;
+  color: white;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* ========================= */
+/* UI BOXES */
+/* ========================= */
+
+.ui-box {
+  position: absolute;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+
+  /* animation vars */
+  transform: translateX(var(--x));
+  opacity: 0;
+
+  transition:
+    transform 0.9s ease,
+    opacity 0.9s ease;
+  transition-delay: var(--delay);
+}
+
+/* POSITIONS */
+.top-left {
+  top: 80px;
+  left: 80px;
+  width: 120px;
+  height: 40px;
+}
+
+.left-card {
+  top: 220px;
+  left: 60px;
+  width: 180px;
+  height: 220px;
+}
+
+.top-right {
+  top: 100px;
+  right: 100px;
+  width: 140px;
+  height: 100px;
+}
+
+.right-card {
+  bottom: 120px;
+  right: 80px;
+  width: 220px;
+  height: 280px;
+}
+
+/* ========================= */
+/* ACTIVE (VISIBLE) STATE */
+/* ========================= */
+
+.zero.show .ui-box {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.zero.show h1,
+.zero.show .cta-btn {
+  transform: translateY(0);
+  opacity: 1;
+}

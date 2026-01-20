@@ -1,0 +1,104 @@
+/* @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+
+.pixelify-sans {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+.nav-wrapper {
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 18px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  top: 0;
+  z-index: 2000;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1350px;
+  margin: auto;
+  min-height: 64px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+.logo {
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+}
+
+.nav-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 26px;
+
+  list-style: none;
+  padding: 10px 22px;
+  margin: 0;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.nav-links li {
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 6px 10px;
+  transition: background 0.2s ease;
+}
+
+.nav-links li:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.search {
+  font-size: 18px;
+}
+
+/* RIGHT BUTTONS */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link-btn {
+  background: none;
+  font-family: "Pixelify Sans", sans-serif;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 6px 12px;
+}
+
+.link-btn:hover {
+  border: 1px solid white;
+  border-radius: 8px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.1);
+
+}
