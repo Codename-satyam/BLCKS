@@ -1,0 +1,87 @@
+.builder {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  background: #0b0f1a;
+}
+
+/* ========================= */
+/* LEFT PANEL */
+/* ========================= */
+
+.builder-panel {
+  background: #11162a;
+  padding: 24px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.builder-panel h2 {
+  font-family: "Pixelify Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+.builder-panel label {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.builder-panel input[type="text"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.builder-panel input[type="color"] {
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* PREVIEW */
+/* ========================= */
+
+.builder-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #080c1a;
+}
+
+.preview-page {
+  width: 90%;
+  max-width: 900px;
+  min-height: 520px;
+  border-radius: 18px;
+  padding: 60px;
+
+  box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.preview-page h1 {
+  font-size: 56px;
+  margin-bottom: 16px;
+}
+
+.preview-page p {
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.preview-page button {
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+}

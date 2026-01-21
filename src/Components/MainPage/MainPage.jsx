@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import "./MainPage.css";
 
+
 function Homepage() {
   const heroRef = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -25,6 +26,9 @@ function Homepage() {
       <div className="ui-box left-card" style={{ "--x": "-160px", "--delay": "0.2s" }} > </div>
       <div className="ui-box top-right" style={{ "--x": "120px", "--delay": "0.3s" }} > </div>
       <div className="ui-box right-card" style={{ "--x": "160px", "--delay": "0.4s" }} > </div>
+      <div className="ui-box bottom-left" style={{ "--x": "-80px", "--delay": "0.5s" }} > </div>
+      <div className="ui-box bottom-right" style={{ "--x": "80px", "--delay": "0.6s" }} > </div>
+
 
       {/* Center Content */}
       <div className="zero-center">

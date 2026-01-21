@@ -16,12 +16,10 @@
   position: relative;
   z-index: 5;
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
@@ -31,7 +29,6 @@
   line-height: 1.1;
   color: #ffffff;
   font-family: "Pixelify Sans", sans-serif;
-
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -61,11 +58,9 @@
   background: white;
   border-radius: 18px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-
   /* animation vars */
   transform: translateX(var(--x));
   opacity: 0;
-
   transition:
     transform 0.9s ease,
     opacity 0.9s ease;
@@ -75,21 +70,21 @@
 /* POSITIONS */
 .top-left {
   top: 80px;
-  left: 80px;
+  left: 300px;
   width: 120px;
   height: 40px;
 }
 
 .left-card {
   top: 220px;
-  left: 60px;
+  left: 100px;
   width: 180px;
   height: 220px;
 }
 
 .top-right {
   top: 100px;
-  right: 100px;
+  right: 300px;
   width: 140px;
   height: 100px;
 }
@@ -99,6 +94,19 @@
   right: 80px;
   width: 220px;
   height: 280px;
+}
+.bottom-left {
+  bottom: 140px;
+  left: 400px;
+  width: 160px;
+  height: 100px;
+}
+
+.bottom-right {
+  bottom: 80px;
+  right: 440px;
+  width: 140px;
+  height: 80px;
 }
 
 /* ========================= */

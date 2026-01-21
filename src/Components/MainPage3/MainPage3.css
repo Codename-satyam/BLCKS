@@ -1,0 +1,193 @@
+.capabilities {
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(circle at 20% 20%, rgba(103, 83, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(52, 217, 255, 0.12), transparent 30%),
+    linear-gradient(135deg, #0b0f1a, #11172a 45%, #0b0f1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px clamp(20px, 6vw, 80px) 120px;
+  overflow: hidden;
+}
+
+.capabilities::after {
+  content: "";
+  position: absolute;
+  inset: 18% 10% auto;
+  height: 240px;
+  filter: blur(110px);
+  background: linear-gradient(90deg, rgba(83, 255, 214, 0.15), rgba(116, 97, 255, 0.18));
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========================= */
+/* GRID LAYOUT */
+/* ========================= */
+
+.cap-layout {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 42px;
+  z-index: 1;
+}
+
+/* ========================= */
+/* FEATURE COLUMNS */
+/* ========================= */
+
+.cap-column {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+/* ALIGNMENT */
+.cap-column.left {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.cap-column.right {
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* ========================= */
+/* FEATURE POSITIONING */
+/* ========================= */
+
+.feature {
+  max-width: 360px;
+  width: 100%;
+  padding: 24px 26px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.02);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.cap-column.left .feature.bottom {
+  margin-top: 120px;
+  margin-right: clamp(60px, 12vw, 200px);
+}
+
+.cap-column.right .feature.bottom {
+  margin-top: 120px;
+  margin-left: clamp(60px, 12vw, 200px);
+}
+
+.feature h3 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.feature p {
+  font-size: 15px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.7;
+}
+
+.feature h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #53ffd6, #7461ff);
+  opacity: 0.75;
+}
+
+.feature:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42), 0 0 0 1px rgba(116, 97, 255, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* CENTER PREVIEW */
+/* ========================= */
+
+.cap-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+  padding: 28px 34px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.preview-title {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cap-center img,
+.cap-center video,
+.cap-center canvas {
+  width: min(520px, 92vw);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.32);
+}
+
+/* ========================= */
+/* ACTIVE STATE */
+/* ========================= */
+
+.capabilities.show .feature {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.capabilities.show .cap-center {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .cap-layout {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+
+  .cap-column.left,
+  .cap-column.right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .cap-column .feature.bottom {
+    margin-top: 60px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

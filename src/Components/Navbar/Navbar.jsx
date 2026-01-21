@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -10,8 +11,8 @@ function Navbar() {
         <ul className="nav-links">
           <li>Platform</li>
           <li>Solutions</li>
-          <li>Resources</li>
-          <li>About me</li>
+          <li><Link to="/builder" style={{ textDecoration: "none", color: "inherit" }}>Live[test]</Link></li>
+          <li><Link to="/about" style={{ textDecoration: "none", color: "inherit" }}>About Me</Link></li>
         </ul>
 
         <div className="nav-right">
