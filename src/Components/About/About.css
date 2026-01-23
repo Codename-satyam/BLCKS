@@ -26,6 +26,8 @@
     width: 280px;
     height: 380px;
     flex-shrink: 0;
+    border-radius: 18px;
+    overflow: hidden;
 }
 
 .image-wrapper img {
