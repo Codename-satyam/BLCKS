@@ -1,6 +1,7 @@
 .upper_head {
   text-align: center;
   padding: 10px 20px 0 20px;
+  box-sizing: border-box;
 }
 
 .upper_head h2 {
@@ -18,7 +19,10 @@
 
 .carousel-section {
   width: 100%;
+  max-width: 100vw;
   padding: 60px 0 10px 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* CAROUSEL */
@@ -27,6 +31,7 @@
   width: 100%;
   overflow: visible;
   margin-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .carousel:hover .carousel-track {
@@ -57,6 +62,7 @@
   background: white;
   cursor: pointer;
   z-index: 1;
+  box-sizing: border-box;
 
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
   transition:
@@ -236,6 +242,7 @@ body.image-expanded::before {
   position: relative;
   overflow: hidden;
   box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+  box-sizing: border-box;
 }
 
 .modal-body {

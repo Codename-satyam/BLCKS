@@ -1,0 +1,52 @@
+.portfolio-preview {
+  min-height: 100%;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+/* NAV */
+.preview-nav {
+  background: #333;
+  padding: 16px;
+}
+
+.preview-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  list-style: none;
+}
+
+.preview-nav li {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* HERO */
+.preview-main {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.preview-main h1 {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.preview-main p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 32px;
+}
+
+.preview-btn {
+  padding: 12px 30px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #61dafb;
+  color: #1a1a1a;
+  font-weight: bold;
+}

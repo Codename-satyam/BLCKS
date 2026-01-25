@@ -5,9 +5,9 @@ import MainPage from './Components/MainPage/MainPage.jsx';
 import MainPage2 from './Components/MainPage2/MainPage2.jsx';
 import MainPage3 from './Components/MainPage3/MainPage3.jsx';
 import MainPage4 from './Components/MainPage4/MainPage4.jsx';
-import PageBuilder from './Components/Build/Builder.jsx';
 
 import About  from './Components/About/About.jsx';
+import TemplateBuilder from './Components/Build/TemplateBuilder.jsx';
 
 
 function App(){
@@ -27,8 +27,8 @@ function App(){
             </>
           )}
         />
-        <Route path="/builder" element={<PageBuilder />} />
         <Route path="/about" element={<About />} />
+        <Route path="/builder" element={<TemplateBuilder />} />
       </Routes>
     </Router>
   );
